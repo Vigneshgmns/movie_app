@@ -14,7 +14,7 @@ import MovieCard from './MovieCard'
 }
  
 function App() {
-  const [movies, setMovies] = useState([])
+  const [movie, setMovies] = useState([])
   const [search, setSearch] = useState('')
 
    const searchMovie = async (title) =>{
@@ -44,11 +44,11 @@ function App() {
             />
         </div>
 
-        {movies?.length > 0 
+        {movie?.length > 0 
           ?(
             <div className='container'>
               {
-                movies.map((movie)=>{
+                movie.map((movie)=>{
                   return <MovieCard movie={movie} />
                 })
               }
